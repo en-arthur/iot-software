@@ -8,8 +8,8 @@ typedef struct {
     char wifi_ssid[33];
     char wifi_password[65];
     char mqtt_uri[128];
-    char mqtt_username[64];
-    char mqtt_password[64];
+    char mqtt_username[128];
+    char mqtt_password[128];
     char board_id[64];
 } app_config_t;
 
