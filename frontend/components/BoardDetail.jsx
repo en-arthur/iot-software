@@ -15,7 +15,7 @@ import {
 } from "@/components/icons";
 import { useBoard } from "@/hooks/useBoard";
 import { useReadings } from "@/hooks/useReadings";
-import { formatSensorName, formatValue } from "@/lib/format";
+import { formatSensorName, formatSensorValue } from "@/lib/format";
 import { DEFAULT_RANGE, RANGE_OPTIONS } from "@/lib/readings";
 
 const SensorChart = dynamic(() => import("@/components/SensorChart"), {
@@ -222,7 +222,7 @@ export default function BoardDetail({ boardId }) {
                   />
                 </div>
                 <p className="mt-3 text-3xl font-semibold tabular-nums tracking-tight text-slate-900">
-                  {formatValue(reading.value)}
+                  {formatSensorValue(reading.sensor, reading.value)}
                 </p>
                 <p
                   className="mt-1 truncate font-mono text-[11px] text-slate-400"

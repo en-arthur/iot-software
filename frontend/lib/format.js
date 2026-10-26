@@ -129,6 +129,45 @@ export function formatSensorName(sensor) {
 }
 
 /**
+ * Units for the sensor keys the firmware is known to publish. Unknown sensors
+ * render without a suffix rather than guessing.
+ */
+const SENSOR_UNITS = {
+  temperature: "°C",
+  air_temperature: "°C",
+  humidity: "%",
+  relative_humidity: "%",
+  soil_moisture: "%",
+  pressure: "hPa",
+  co2: "ppm",
+};
+
+/**
+ * Unit suffix for a sensor key, or an empty string when it is unknown.
+ *
+ * @param {string | null | undefined} sensor
+ * @returns {string}
+ */
+export function sensorUnit(sensor) {
+  if (!sensor) return "";
+  return SENSOR_UNITS[String(sensor).trim().toLowerCase()] ?? "";
+}
+
+/**
+ * Format a sensor value together with its unit, e.g. "24.5 °C".
+ *
+ * @param {string | null | undefined} sensor
+ * @param {unknown} value
+ * @returns {string}
+ */
+export function formatSensorValue(sensor, value) {
+  const text = formatValue(value);
+  const unit = sensorUnit(sensor);
+  if (!unit || text === "—") return text;
+  return `${text} ${unit}`;
+}
+
+/**
  * Make long board IDs easier to scan.
  *
  * @param {string | null | undefined} id

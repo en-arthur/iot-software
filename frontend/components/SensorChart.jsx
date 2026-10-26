@@ -13,6 +13,7 @@ import {
   formatChartTime,
   formatChartTooltipTime,
   formatSensorName,
+  formatSensorValue,
   formatValue,
 } from "@/lib/format";
 
@@ -31,7 +32,7 @@ function ChartTooltip({ active, payload, label, sensor }) {
     <div className="rounded-xl border border-slate-200 bg-white px-3 py-2 shadow-lg">
       <p className="text-xs text-slate-500">{formatChartTooltipTime(label)}</p>
       <p className="mt-1 text-sm font-semibold tabular-nums text-slate-900">
-        {formatValue(payload[0]?.value)}
+        {formatSensorValue(sensor, payload[0]?.value)}
       </p>
       <p className="text-xs text-slate-500">{formatSensorName(sensor)}</p>
     </div>
@@ -63,7 +64,7 @@ export default function SensorChart({ sensor, data, range }) {
         </div>
         <div className="shrink-0 text-right">
           <p className="text-sm font-semibold tabular-nums text-slate-900">
-            {formatValue(latestPoint?.value)}
+            {formatSensorValue(sensor, latestPoint?.value)}
           </p>
           <p className="text-[11px] text-slate-400">{points.length} pts</p>
         </div>
