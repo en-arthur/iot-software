@@ -53,7 +53,7 @@ create table if not exists public.relay_states (
 );
 
 comment on table public.boards is
-    'ESP32 boards. owner_id is null until a user claims the board.';
+    'Extension boards. owner_id is null until a user connects the board.';
 comment on table public.readings is
     'Raw sensor history, pruned by pg_cron after the retention window.';
 comment on table public.latest_readings is
