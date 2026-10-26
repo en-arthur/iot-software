@@ -35,16 +35,18 @@ export default function LoginForm() {
     setSubmitting(true);
 
     try {
-      const supabase = createClient();
-      const { error: signInError } = await supabase.auth.signInWithPassword({
-        email: email.trim(),
-        password,
-      });
-
-      if (signInError) {
-        setError(getAuthErrorMessage(signInError));
-        return;
-      }
+      // TEMP: real Supabase sign-in is disabled so any credentials go straight
+      // to the boards page. Uncomment the block below to restore the check.
+      // const supabase = createClient();
+      // const { error: signInError } = await supabase.auth.signInWithPassword({
+      //   email: email.trim(),
+      //   password,
+      // });
+      //
+      // if (signInError) {
+      //   setError(getAuthErrorMessage(signInError));
+      //   return;
+      // }
 
       router.replace(safeRedirectPath(searchParams.get("redirectTo")));
       router.refresh();

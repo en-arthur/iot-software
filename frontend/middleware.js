@@ -1,6 +1,10 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse } from "next/server";
 
+// TEMP: skips the Supabase session check and the /boards redirect so the app
+// can be used without signing in. Set back to false to restore the guards.
+const SKIP_AUTH = true;
+
 /**
  * Refresh the Supabase session on every matched request and protect the
  * /boards routes. Cookie writes are mirrored onto the outgoing response.
@@ -9,6 +13,10 @@ import { NextResponse } from "next/server";
  * @returns {Promise<import("next/server").NextResponse>}
  */
 export async function middleware(request) {
+  if (SKIP_AUTH) {
+    return NextResponse.next({ request });
+  }
+
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
