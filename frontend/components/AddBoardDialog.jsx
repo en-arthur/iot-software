@@ -8,7 +8,7 @@ import { claimBoard } from "@/lib/api";
 import { boardsQueryKey } from "@/hooks/useBoards";
 
 /**
- * Modal for claiming an unowned board through the FastAPI backend.
+ * Modal for connecting an unowned board through the FastAPI backend.
  *
  * @param {{ open: boolean, onClose: () => void }} props
  */
@@ -95,7 +95,7 @@ export default function AddBoardDialog({ open, onClose }) {
               <h2 id="add-board-title" className="text-lg font-semibold text-slate-900">
                 Add an extension board
               </h2>
-              <p className="text-sm text-slate-500">Claim an unowned extension board.</p>
+              <p className="text-sm text-slate-500">Connect to an extension board.</p>
             </div>
           </div>
           <button
@@ -142,7 +142,7 @@ export default function AddBoardDialog({ open, onClose }) {
               className="flex items-start gap-2.5 rounded-xl border border-red-200 bg-red-50 px-3.5 py-3 text-sm text-red-700"
             >
               <AlertTriangleIcon className="mt-0.5 h-4 w-4 shrink-0" />
-              <span>{mutation.error?.message || "Could not claim this extension board."}</span>
+              <span>{mutation.error?.message || "Could not connect to this extension board."}</span>
             </div>
           ) : null}
 
@@ -166,10 +166,10 @@ export default function AddBoardDialog({ open, onClose }) {
                     className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white"
                     aria-hidden="true"
                   />
-                  Claiming…
+                  Connecting…
                 </>
               ) : (
-                "Claim board"
+                "Connect to board"
               )}
             </button>
           </div>

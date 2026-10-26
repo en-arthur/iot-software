@@ -13,7 +13,7 @@ export default function EmptyBoards({ onAddBoard }) {
       </div>
       <h2 className="mt-5 text-lg font-semibold text-slate-900">No extension board yet</h2>
       <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-600">
-        Power on your extension board and wait for it to come online. Then claim it with the
+        Power on your extension board and wait for it to come online. Then connect to it with the
         board ID printed in its setup log.
       </p>
       <button
@@ -24,7 +24,7 @@ export default function EmptyBoards({ onAddBoard }) {
         Add your first extension board
       </button>
       <p className="mt-4 text-xs text-slate-400">
-        You can only claim an extension board that hasn&apos;t been claimed yet.
+        You can only connect to an extension board that isn&apos;t linked to another account yet.
       </p>
     </div>
   );

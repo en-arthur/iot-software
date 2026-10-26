@@ -97,7 +97,7 @@ function messageForStatus(
       return forbiddenMessage;
     }
     if (/already claimed|already owned|claimed by/i.test(detail)) {
-      return "This board has already been claimed.";
+      return "This extension board is already connected to another account.";
     }
     if (status === 409 && /^(conflict|already exists)$/i.test(detail)) {
       return conflictMessage;
@@ -238,7 +238,7 @@ export async function sendRelayCommand(boardId, relayNumber, state) {
 }
 
 /**
- * Claim an unowned board for the signed-in user.
+ * Connect an unowned board to the signed-in user.
  *
  * @param {string} boardId
  * @returns {Promise<unknown>}
@@ -253,7 +253,7 @@ export async function claimBoard(boardId) {
   return request("/boards/claim", {
     method: "POST",
     body: { board_id: trimmedBoardId },
-    conflictMessage: "This board has already been claimed.",
-    forbiddenMessage: "You can't claim this board.",
+    conflictMessage: "This extension board is already connected to another account.",
+    forbiddenMessage: "You can't connect to this extension board.",
   });
 }
