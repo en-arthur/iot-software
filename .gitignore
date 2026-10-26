@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and local config
+.env
+.env.local
+.env.*.local
+
+# Mosquitto password file and runtime data (generate them locally, never commit)
+mosquitto/passwd
+mosquitto/data/
+
+# Supabase CLI
+supabase/.branches/
+supabase/.temp/
+
+# ESP-IDF build output and generated config
+firmware/esp-idf/build/
+firmware/esp-idf/sdkconfig
+firmware/esp-idf/sdkconfig.old
+firmware/esp-idf/managed_components/
+firmware/esp-idf/dependencies.lock

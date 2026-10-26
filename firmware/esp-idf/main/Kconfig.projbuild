@@ -1,0 +1,57 @@
+menu "Relayboard"
+
+    config RELAYBOARD_WIFI_SSID
+        string "WiFi SSID"
+        default "YOUR_WIFI"
+        help
+            WiFi network the board joins. It must reach the Mosquitto host.
+
+    config RELAYBOARD_WIFI_PASSWORD
+        string "WiFi password"
+        default "YOUR_PASSWORD"
+
+    config RELAYBOARD_MQTT_URI
+        string "MQTT broker URI"
+        default "mqtt://192.168.1.50:1883"
+        help
+            Use the LAN IP of the machine running Mosquitto. localhost on the
+            board points at the board itself. Use mqtts://... only if the
+            broker has TLS enabled (not the default setup).
+
+    config RELAYBOARD_MQTT_USERNAME
+        string "MQTT username"
+        default "relayboard"
+
+    config RELAYBOARD_MQTT_PASSWORD
+        string "MQTT password"
+        default "change-me"
+
+    config RELAYBOARD_BOARD_ID
+        string "Board ID"
+        default "esp32-01"
+        help
+            Unique board identifier. This is what you claim in the web app and
+            what appears in boards/{board_id}/... topics.
+
+    config RELAYBOARD_RELAY_GPIO
+        int "Relay / LED GPIO"
+        range 0 39
+        default 2
+
+    config RELAYBOARD_RELAY_ACTIVE_HIGH
+        bool "Relay is active high"
+        default y
+        help
+            Disable for active-low relay modules.
+
+    config RELAYBOARD_DHT_GPIO
+        int "DHT11 data GPIO"
+        range 0 39
+        default 4
+
+    config RELAYBOARD_SENSOR_INTERVAL_S
+        int "Sensor publish interval (seconds)"
+        range 2 3600
+        default 10
+
+endmenu

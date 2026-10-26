@@ -1,0 +1,4 @@
+# The firmware formats floats and 64-bit timestamps with printf-style calls
+# (sensor payloads and logs), so use the full newlib formatter. On most targets
+# this is already the default; ESP32-C2 defaults to the nano formatter.
+CONFIG_NEWLIB_NANO_FORMAT=n
