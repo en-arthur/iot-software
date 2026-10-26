@@ -95,7 +95,7 @@ export default function AddBoardDialog({ open, onClose }) {
               <h2 id="add-board-title" className="text-lg font-semibold text-slate-900">
                 Add a board
               </h2>
-              <p className="text-sm text-slate-500">Claim an unowned ESP32 board.</p>
+              <p className="text-sm text-slate-500">Claim an unowned extension board.</p>
             </div>
           </div>
           <button
@@ -127,11 +127,11 @@ export default function AddBoardDialog({ open, onClose }) {
               value={boardId}
               onChange={(event) => setBoardId(event.target.value)}
               disabled={mutation.isPending}
-              placeholder="e.g. esp32-a1b2c3d4"
+              placeholder="e.g. relayboard-a1b2c3d4"
               className="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 font-mono text-sm text-slate-900 shadow-sm outline-none transition placeholder:font-sans placeholder:text-slate-400 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 disabled:cursor-not-allowed disabled:bg-slate-50"
             />
             <p className="mt-2 text-xs leading-5 text-slate-500">
-              Find this in the board&apos;s serial output after it connects. Board IDs are
+              Find this in the board&apos;s setup log after it connects. Board IDs are
               case-sensitive.
             </p>
           </div>

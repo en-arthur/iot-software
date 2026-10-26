@@ -10,7 +10,7 @@ export const metadata = {
     template: "%s · Relayboard",
   },
   description:
-    "Monitor ESP32 extension boards, watch live sensor data, and switch relays from anywhere.",
+    "Monitor your extension boards, watch live sensor data, and switch relays from anywhere.",
 };
 
 export const viewport = {

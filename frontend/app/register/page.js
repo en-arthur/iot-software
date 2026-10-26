@@ -9,7 +9,7 @@ export default function RegisterPage() {
   return (
     <AuthShell
       title="Create your account"
-      subtitle="Claim your first ESP32 extension board in under a minute."
+      subtitle="Claim your first extension board in under a minute."
     >
       <RegisterForm />
     </AuthShell>

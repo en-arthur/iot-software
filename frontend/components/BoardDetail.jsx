@@ -188,7 +188,7 @@ export default function BoardDetail({ boardId }) {
               Live readings
             </h2>
             <p className="mt-1 text-sm text-slate-600">
-              Latest value per sensor, updated as the board publishes.
+              Latest value per sensor, updated as new readings arrive.
             </p>
           </div>
           <span className="text-xs text-slate-400">
@@ -200,7 +200,7 @@ export default function BoardDetail({ boardId }) {
           <div className="mt-4 rounded-2xl border border-dashed border-slate-300 bg-white px-6 py-10 text-center">
             <p className="text-sm font-medium text-slate-700">No sensor data yet</p>
             <p className="mt-1 text-sm text-slate-500">
-              Values will appear here as soon as the board publishes to MQTT.
+              Values will appear here as soon as the board sends its first reading.
             </p>
           </div>
         ) : (

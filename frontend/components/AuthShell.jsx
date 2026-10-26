@@ -2,7 +2,7 @@ import Logo from "@/components/Logo";
 import { CheckCircleIcon } from "@/components/icons";
 
 const FEATURES = [
-  "Live sensor values streamed from your ESP32",
+  "Live sensor values streamed from your boards",
   "Relay switches that only flip after the board confirms",
   "History charts with 1h, 24h, and 7d ranges",
 ];
@@ -32,7 +32,7 @@ export default function AuthShell({ title, subtitle, children, footer }) {
             Your extension boards, live in one place.
           </h2>
           <p className="mt-4 max-w-md text-base leading-7 text-slate-600">
-            Watch readings arrive, switch relays, and review history without touching the ESP32.
+            Watch readings arrive, switch relays, and review history without touching the hardware.
           </p>
           <ul className="mt-8 space-y-4">
             {FEATURES.map((feature) => (

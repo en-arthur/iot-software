@@ -13,8 +13,8 @@ export default function EmptyBoards({ onAddBoard }) {
       </div>
       <h2 className="mt-5 text-lg font-semibold text-slate-900">No boards yet</h2>
       <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-600">
-        Power on your ESP32 extension board and let it connect to MQTT. Then claim it with the
-        board ID printed in its serial log.
+        Power on your extension board and wait for it to come online. Then claim it with the
+        board ID printed in its setup log.
       </p>
       <button
         type="button"
