@@ -29,7 +29,7 @@ export function BoardGridSkeleton({ count = 6 }) {
     <div
       className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
       role="status"
-      aria-label="Loading boards"
+      aria-label="Loading board"
     >
       {Array.from({ length: count }).map((_, index) => (
         <div
@@ -52,7 +52,7 @@ export function BoardGridSkeleton({ count = 6 }) {
           </div>
         </div>
       ))}
-      <span className="sr-only">Loading boards…</span>
+      <span className="sr-only">Loading board…</span>
     </div>
   );
 }

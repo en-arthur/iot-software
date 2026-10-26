@@ -88,7 +88,7 @@ export default function BoardDetail({ boardId }) {
           className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-slate-900"
         >
           <ArrowLeftIcon className="h-4 w-4" />
-          All boards
+          Back to board
         </Link>
         <ErrorState
           className="mt-6"
@@ -122,7 +122,7 @@ export default function BoardDetail({ boardId }) {
         className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-slate-900"
       >
         <ArrowLeftIcon className="h-4 w-4" />
-        All boards
+        Back to board
       </Link>
 
       <header className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">

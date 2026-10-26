@@ -1,7 +1,7 @@
 import BoardList from "@/components/BoardList";
 
 export const metadata = {
-  title: "Boards",
+  title: "Board",
 };
 
 export default function BoardsPage() {

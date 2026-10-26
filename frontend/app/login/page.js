@@ -11,7 +11,7 @@ export default function LoginPage() {
   return (
     <AuthShell
       title="Welcome back"
-      subtitle="Sign in to see your boards and switch relays."
+      subtitle="Sign in to see your board and switch relays."
     >
       <Suspense fallback={<AuthFormSkeleton />}>
         <LoginForm />
