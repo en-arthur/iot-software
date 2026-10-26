@@ -1,4 +1,3 @@
-import Logo from "@/components/Logo";
 import { CheckCircleIcon } from "@/components/icons";
 
 const FEATURES = [
@@ -27,8 +26,7 @@ export default function AuthShell({ title, subtitle, children, footer }) {
 
       <div className="mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-6xl items-center gap-12 px-4 py-10 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div className="hidden lg:block">
-          <Logo />
-          <h2 className="mt-10 max-w-lg text-4xl font-semibold tracking-tight text-slate-900">
+          <h2 className="max-w-lg text-4xl font-semibold tracking-tight text-slate-900">
             Your extension boards, live in one place.
           </h2>
           <p className="mt-4 max-w-md text-base leading-7 text-slate-600">
