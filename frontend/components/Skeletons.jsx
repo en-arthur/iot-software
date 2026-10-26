@@ -29,7 +29,7 @@ export function BoardGridSkeleton({ count = 6 }) {
     <div
       className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
       role="status"
-      aria-label="Loading board"
+      aria-label="Loading extension board"
     >
       {Array.from({ length: count }).map((_, index) => (
         <div
@@ -52,14 +52,14 @@ export function BoardGridSkeleton({ count = 6 }) {
           </div>
         </div>
       ))}
-      <span className="sr-only">Loading board…</span>
+      <span className="sr-only">Loading extension board…</span>
     </div>
   );
 }
 
 export function BoardDetailSkeleton() {
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8" role="status" aria-label="Loading board">
+    <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8" role="status" aria-label="Loading extension board">
       <Skeleton className="h-4 w-24" />
       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="space-y-3">
@@ -99,7 +99,7 @@ export function BoardDetailSkeleton() {
           <ChartSkeleton />
         </div>
       </div>
-      <span className="sr-only">Loading board…</span>
+      <span className="sr-only">Loading extension board…</span>
     </div>
   );
 }

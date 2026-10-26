@@ -25,7 +25,7 @@ export default function BoardList() {
             Overview
           </p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">
-            Your board
+            Your extension board
           </h1>
           <p className="mt-2 max-w-xl text-sm leading-6 text-slate-600">
             Live sensor values and relay controls for your extension board.
@@ -38,8 +38,8 @@ export default function BoardList() {
             onClick={() => refetch()}
             disabled={isFetching}
             className="inline-flex h-10 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-60"
-            aria-label="Refresh board"
-            title="Refresh board"
+            aria-label="Refresh extension board"
+            title="Refresh extension board"
           >
             <RefreshIcon className={`h-4 w-4 ${isFetching ? "animate-spin" : ""}`} />
           </button>
@@ -49,7 +49,7 @@ export default function BoardList() {
             className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 sm:flex-none"
           >
             <PlusIcon className="h-4 w-4" />
-            Add board
+            Add extension board
           </button>
         </div>
       </div>
@@ -59,7 +59,7 @@ export default function BoardList() {
       {isError ? (
         <ErrorState
           className="mt-8"
-          title="Couldn't load your board"
+          title="Couldn't load your extension board"
           message={
             error?.message ||
             "Check your connection and make sure your Supabase project is configured."

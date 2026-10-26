@@ -1,7 +1,7 @@
 import { CheckCircleIcon } from "@/components/icons";
 
 const FEATURES = [
-  "Live sensor values streamed from your board",
+  "Live sensor values streamed from your extension board",
   "Relay switches that only flip after the board confirms",
   "History charts with 1h, 24h, and 7d ranges",
 ];

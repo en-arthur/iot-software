@@ -2,7 +2,7 @@ import BoardDetail from "@/components/BoardDetail";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  return { title: `Board ${id}` };
+  return { title: `Extension board ${id}` };
 }
 
 export default async function BoardPage({ params }) {

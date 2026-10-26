@@ -88,14 +88,14 @@ export default function BoardDetail({ boardId }) {
           className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-slate-900"
         >
           <ArrowLeftIcon className="h-4 w-4" />
-          Back to board
+          Back to extension board
         </Link>
         <ErrorState
           className="mt-6"
-          title={notFound ? "Board not found" : "Couldn't load this board"}
+          title={notFound ? "Extension board not found" : "Couldn't load this extension board"}
           message={
             notFound
-              ? "This board doesn't exist, or it belongs to another account."
+              ? "This extension board doesn't exist, or it belongs to another account."
               : error?.message ||
                 "Check your connection and make sure your Supabase project is configured."
           }
@@ -122,7 +122,7 @@ export default function BoardDetail({ boardId }) {
         className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-slate-900"
       >
         <ArrowLeftIcon className="h-4 w-4" />
-        Back to board
+        Back to extension board
       </Link>
 
       <header className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
@@ -172,8 +172,8 @@ export default function BoardDetail({ boardId }) {
         >
           <AlertTriangleIcon className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
           <p>
-            <span className="font-semibold">Board offline.</span> Relay controls are disabled until
-            it reconnects. Sensor values show the last data received.
+            <span className="font-semibold">Extension board offline.</span> Relay controls are
+            disabled until it reconnects. Sensor values show the last data received.
           </p>
         </div>
       ) : null}

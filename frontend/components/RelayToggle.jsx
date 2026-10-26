@@ -59,7 +59,7 @@ export default function RelayToggle({ boardId, relay, disabled = false }) {
       if (caughtError?.status === 403) {
         setError("Not your board");
       } else if (caughtError?.status === 409) {
-        setError("Board is offline");
+        setError("Extension board is offline");
       } else {
         setError(caughtError?.message || "Could not send the relay command.");
       }

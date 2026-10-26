@@ -12,7 +12,7 @@ import { ArrowRightIcon, ChipIcon } from "@/components/icons";
  */
 export default function BoardCard({ board }) {
   const isOnline = String(board.status ?? "").toLowerCase() === "online";
-  const name = board.name || "Unnamed board";
+  const name = board.name || "Unnamed extension board";
 
   return (
     <li>
